@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>明心居 - 纳于大麓，烈风雷雨弗迷</title><meta name="author" content="渊和"><meta name="copyright" content="渊和"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="风雨如晦 鸡鸣不已 既见君子 云胡不喜">
+<meta property="og:type" content="website">
+<meta property="og:title" content="明心居">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="明心居">
+<meta property="og:description" content="风雨如晦 鸡鸣不已 既见君子 云胡不喜">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/img/avatar.jpg">
+<meta property="article:author" content="渊和">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/img/avatar.jpg"><link rel="shortcut icon" href="/img/favicon%2032.ico"><link rel="canonical" href="http://yoursite.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.2.0',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false,
+  postUpdate: '2020-12-15 21:27:45'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {
+  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }
+})()</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">7</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">5</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">7</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 前庭</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th-list"></i><span> 中堂</span></a></div><div class="menus_item"><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书轩</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-leaf"></i><span> 后院</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 邻舍</span></a></div></div></div></div><div id="body-wrap"><div id="web_bg"></div><header class="full_page" id="page-header" style="background-image: url(/img/bg0.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">明心居</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 前庭</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th-list"></i><span> 中堂</span></a></div><div class="menus_item"><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书轩</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-leaf"></i><span> 后院</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 邻舍</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">明心居</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page hide-aside" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/12/07/0002%20%E5%B0%8F%E7%AB%99%E6%B8%B8%E8%A7%88%E6%8C%87%E5%8D%97/" title="小站游览指南（For 2020.12.12）">     <img class="post_bg" src="/img/0002.jpg" onerror="this.onerror=null;this.src='/img/bg404.jpg'" alt="小站游览指南（For 2020.12.12）"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/07/0002%20%E5%B0%8F%E7%AB%99%E6%B8%B8%E8%A7%88%E6%8C%87%E5%8D%97/" title="小站游览指南（For 2020.12.12）">小站游览指南（For 2020.12.12）</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack article-meta__icon sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-07T04:50:00.000Z" title="发表于 2020-12-07 12:50:00">2020-12-07</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%85%AC%E5%91%8A%E6%A0%8F/">公告栏</a></span></div><div class="content"> 致各位友人：
+  你好，欢迎到访本站！本站以分享与学习为主题。关于本站的建站缘由已在 Why Blog 中说过了，所以长话短说：
+ 1.关于网站的架构
+  架构如下：
+12345678910111213141516171819202122232425262728293031明心居├─前院   &#x2F;&#x2F;「搜索」；是根据各位的兴趣关键字而搜索文章的功能│├─内庭   &#x2F;&#x2F;「主页」；是以发表时间而排列的文章流（article stream）│├─中堂   &#x2F;&#x2F;「分类」；是文章类目，以文章性质而分类│  ├─公告栏   &#x2F;&#x2F;「公告」│  ││  ├─研书案   &#x2F;&#x2F;「札记」；是阅读札记和课程札记类文章的类目│  │  ├─人文│  │  ├─社会│  │  ├─心理│  │  ├─应用技术│  │  └─生活│  ││  ├─论文台   &#x2F;&#x2F;「论文」；是议论类文章的类目，仅为个人思考，不属于严格学术范畴│  │  ├─人文│  │  ├─社会│  │  ├─心理│  │  ├─ ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/12/15/B5002%20%E5%AF%B9%E4%BA%8E%E7%A2%8E%E7%89%87%E5%8C%96%E4%BF%A1%E6%81%AF%E7%9A%84%E6%80%9D%E8%80%83/" title="关于碎片化信息和高刺激性信息的思考">     <img class="post_bg" src="/img/B5002.jpg" onerror="this.onerror=null;this.src='/img/bg404.jpg'" alt="关于碎片化信息和高刺激性信息的思考"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/15/B5002%20%E5%AF%B9%E4%BA%8E%E7%A2%8E%E7%89%87%E5%8C%96%E4%BF%A1%E6%81%AF%E7%9A%84%E6%80%9D%E8%80%83/" title="关于碎片化信息和高刺激性信息的思考">关于碎片化信息和高刺激性信息的思考</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-15T13:00:00.000Z" title="发表于 2020-12-15 21:00:00">2020-12-15</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E8%AE%BA%E6%96%87%E5%8F%B0/">论文台</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E8%AE%BA%E6%96%87%E5%8F%B0/%E7%94%9F%E6%B4%BB/">生活</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E4%BF%A1%E6%81%AF%E7%94%9F%E6%B4%BB/">信息生活</a></span></div><div class="content"> 一、涵义
+ 1.碎片化信息的涵义
+  碎片化信息是与整体化信息相对立的概念；对比的对象应该是信息时代来临之前的信息。相对于以前的信息，碎片化信息显得更为零散、更不成体系。但这并不意味着碎片化信息的信息量小，相反，当代的碎片化信息的信息量可以很大，这是由于信息媒介的科技含量较以前更高。但是当代的碎片化信息的信息量并不总是聚焦在有效信息上的，而常常是聚焦在外在形式上的。这导致信息的信息丰度[1]往往很低。例如某乎问答社区，可以用文字、图片和视频方式作答，但由于作答门槛很低，以至于某些回答下存在一些无意义回答和偏见回答泛滥。即使图片再精美、视频再华丽（信息量再高），也无法挽救回答本身的信息质量。需要注意的是，信息丰度是取决于受众的信息目标而评定的，不同的信息目标往往会给出不同的信息丰度。本文所提的信息丰度是以信息的科学性和有效性作为评判基准的。
+（1）碎片化信息的形式
+  碎片化信息主要出现在互联网中，特别是移动互联网。通常包括如下形式：
+
+短评论，含表情包；
+短视频，如抖音视频；
+短文章，如一部分知乎回答、公众号文章；
+短社交；注意，并非所有即时通讯软件的社交都属于短社交，不过它是最适用 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/12/01/A1002%20%E5%8F%A4%E5%B8%8C%E8%85%8A%E6%88%8F%E5%89%A7%E9%80%89%E8%AF%BB%E6%9C%AD%E8%AE%B0/" title="古希腊戏剧选读札记">     <img class="post_bg" src="/img/A1002.jpg" onerror="this.onerror=null;this.src='/img/bg404.jpg'" alt="古希腊戏剧选读札记"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/01/A1002%20%E5%8F%A4%E5%B8%8C%E8%85%8A%E6%88%8F%E5%89%A7%E9%80%89%E8%AF%BB%E6%9C%AD%E8%AE%B0/" title="古希腊戏剧选读札记">古希腊戏剧选读札记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-01T06:55:00.000Z" title="发表于 2020-12-01 14:55:00">2020-12-01</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E8%AE%BA%E6%96%87%E5%8F%B0/">论文台</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E8%AE%BA%E6%96%87%E5%8F%B0/%E4%BA%BA%E6%96%87/">人文</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%8F%A4%E5%B8%8C%E8%85%8A%E6%96%87%E5%AD%A6/">古希腊文学</a></span></div><div class="content">
+选本案：
+埃斯库罗斯悲剧四种：《被缚的普罗米修斯（Prometheus Bound）》《俄瑞斯忒亚（Oresteia）（三部曲）》
+索福克勒斯悲剧三种：《俄狄浦斯王（Oedipus the King）》《俄狄浦斯王在克洛诺斯（ Oedipus at Colonus）》《安提戈涅（ Antigone）》
+欧里庇得斯悲剧三种：《美狄亚（Medea）》《特洛亚妇女（The Trojan Women）》《酒神的伴侣（The Bacchae）》
+阿里斯托芬喜剧三种：《云（Clouds）》《鸟（The Birds）》《蛙（Frogs）》《吕西斯特拉忒（Lysistrata）》
+
+
+ 一、古希腊戏剧绪论
+ 1.起源
+  古希腊戏剧起源于对酒神狄俄尼索斯的祭祀活动，不过这种原本的欢庆活动在之后的成熟期演变成了一场深刻的文学活动。
+  古希腊戏剧诞生于公元前 6 世纪，是世界上最古老的戏剧。与之相对应的，是中国传统的「乐」文化，且同样起源于祭祀。那时，这种「乐」文化只存在于宫廷贵族之间，配合「诗」作为其台词，其真正发展为成熟的戏曲要等到宋朝商品经济高度繁荣、市民文化逐渐兴盛的时期。
+
+ 2.特点
+   ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/11/16/B2003%20%E5%85%B3%E4%BA%8E%E3%80%8C%E5%8E%9F%E7%A5%9E%E3%80%8D%E7%9A%84%E6%80%9D%E8%80%83%E2%80%94%E2%80%94%E5%85%BC%E6%8E%A2%E5%86%85%E8%B4%AD%E5%88%B6%E6%89%8B%E6%B8%B8%E6%B8%B8%E6%88%8F%E6%9C%BA%E5%88%B6/" title="关于「原神」的思考——兼探内购制手游游戏机制">     <img class="post_bg" src="/img/B2003.jpg" onerror="this.onerror=null;this.src='/img/bg404.jpg'" alt="关于「原神」的思考——兼探内购制手游游戏机制"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/16/B2003%20%E5%85%B3%E4%BA%8E%E3%80%8C%E5%8E%9F%E7%A5%9E%E3%80%8D%E7%9A%84%E6%80%9D%E8%80%83%E2%80%94%E2%80%94%E5%85%BC%E6%8E%A2%E5%86%85%E8%B4%AD%E5%88%B6%E6%89%8B%E6%B8%B8%E6%B8%B8%E6%88%8F%E6%9C%BA%E5%88%B6/" title="关于「原神」的思考——兼探内购制手游游戏机制">关于「原神」的思考——兼探内购制手游游戏机制</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-15T19:45:00.000Z" title="发表于 2020-11-16 03:45:00">2020-11-16</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E8%AE%BA%E6%96%87%E5%8F%B0/">论文台</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E8%AE%BA%E6%96%87%E5%8F%B0/%E7%A4%BE%E4%BC%9A/">社会</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F/">电子游戏</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%95%86%E4%B8%9A/">商业</a></span></div><div class="content"> 一、内购制
+ 1.内购制与买断制
+  一般而言，游戏分为内购制和买断制。买断制游戏大多属于单机、主机游戏，内购制游戏大多属于网游、页游和手游。两种收费制度显然是适应不同的市场而产生的。
+  单机、主机游戏的市场主要是由具有一定财富基础的玩家所构成的，通常此类玩家的正版付费意识也较强。这是因为单机、主机游戏必须要求一定的物质门槛——PC 或主机，所以这些具备相当支付能力的玩家就被被动筛选出来。手游的物质门槛显然要较单机、主机游戏较低，不仅是因为智能手机的费用要较 PC 和主机为低，而且因为智能手机在现代社会的需求程度、普及率要较 PC 为高、较主机远为高。可以发现，主机几乎是为了游戏而存在设备；PC 和手机都具备大致相当的功能，但手机的通话功能是难以被 PC 代替的，手机的便捷性也较 PC 为高；除此之外，在中国的传统文化的环境中，为游戏而赀费不菲显然是不符合一般道德的。综上而言，常人的游戏设备进阶路线遵循：手机——PC——主机（部分重度玩家可以省略中间的 PC 阶段）。因此可以猜测，游戏玩家的资产等级大致也服从上述路线。
+
+ 2.内购制与买断制的争议
+  以米哈游社开发的《原神》为例 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/10/01/A1001%E3%80%8A%E8%8D%B7%E9%A9%AC%E5%8F%B2%E8%AF%97%E3%80%8B%E6%9C%AD%E8%AE%B0/" title="《荷马史诗》札记">     <img class="post_bg" src="/img/A1001.jpg" onerror="this.onerror=null;this.src='/img/bg404.jpg'" alt="《荷马史诗》札记"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/10/01/A1001%E3%80%8A%E8%8D%B7%E9%A9%AC%E5%8F%B2%E8%AF%97%E3%80%8B%E6%9C%AD%E8%AE%B0/" title="《荷马史诗》札记">《荷马史诗》札记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-10-01T14:41:23.000Z" title="发表于 2020-10-01 22:41:23">2020-10-01</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E7%A0%94%E4%B9%A6%E6%A1%88/">研书案</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/%E7%A0%94%E4%B9%A6%E6%A1%88/%E4%BA%BA%E6%96%87/">人文</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%8F%A4%E5%B8%8C%E8%85%8A%E6%96%87%E5%8C%96/">古希腊文化</a></span></div><div class="content">本文意在谈谈《荷马史诗》中的人、神与命运</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/05/03/0001-Why-Blog/" title="Why Blog">     <img class="post_bg" src="/img/0001.jpg" onerror="this.onerror=null;this.src='/img/bg404.jpg'" alt="Why Blog"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/05/03/0001-Why-Blog/" title="Why Blog">Why Blog</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-03T06:16:54.000Z" title="发表于 2020-05-03 14:16:54">2020-05-03</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%85%AC%E5%91%8A%E6%A0%8F/">公告栏</a></span></div><div class="content"> Why blog？
+  Blog 提供了思维的驱动，驱动思维延展到更高、更深、更广的维度，同时也将知识加工到更高、更深、更广的程度。
+  Blog 同时也提供了一个展示的网络平台，由此，为深度交流提供一种快捷方式。
+  Blog 是一种记录，正如它的原文——「web log（网络日志）」所表达的那样。
+
+ 对网络环境的一些思考
+  如今的网络环境，商业化是大势所趋。遗憾的是，在商家与用户之间，商家占据绝对优势。微信的公众号就是一个例子，我们甚至无法在搜索引擎中搜索到任何公众号的内容，也无法对文章进行大改。
+  左思右想之下，我认为，如果想赚取利益，我最好服从大势；如果想获得自主与个性化，我就应该选择独立博客。幸好我还是一个学生，不用为生计和家业操心太多；所幸在迈入职场之前，我还有一点任性的余地。
+
+ 博客的主要功能和意义
+  博客的主要功能是促进写作，进而促进博主进行深度反思和总结。「不经反思的人生不值一过」，若要求取智慧，就必先从自身的经验出发，这是反思的意义；学习的深入推进需要一场总结来进行升华，这是总结的意义。
+  西哲云：「认识你自己。」这是因为人不是低级生物，他天生具备进行 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/05/01/0000%20Hello-World/" title="Hello World">     <img class="post_bg" src="/img/0000.jpg" onerror="this.onerror=null;this.src='/img/bg404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/05/01/0000%20Hello-World/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-01T15:20:38.000Z" title="发表于 2020-05-01 23:20:38">2020-05-01</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%85%AC%E5%91%8A%E6%A0%8F/">公告栏</a></span></div><div class="content">这是博客的第一篇文章</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div></main><footer id="footer" style="background-image: url(/img/bg0.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2020 By 渊和</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div></div></body></html>
